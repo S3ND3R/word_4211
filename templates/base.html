@@ -5,12 +5,22 @@
   <body>
     {% block navbar %}
     <nav>
-      <h1>{{name}} Program</h1>
+      <h1>Word Finder</h1>
+      <p>Designed by {{name}}</p>
     </nav>
     {% endblock %}
 
     {% block content %}
     default content
     {% endblock %}
+
+    {% block footer %}
+    <footer>
+      <div class="git">
+        <a href="https://github.com/S3ND3R/S3ND3R.github.io">git repo</a>
+      </div>
+    </footer>
+    {% endblock %}
   </body>
+  <script src="/static/wordjs.js" ></script>
 </html>

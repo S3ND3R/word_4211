@@ -1,10 +1,15 @@
 {% extends "base.html" %}
 
 {% block content %}
+<div class="modal">
+  <span class="close" onclick="close_box()">&times;</span>
+  <div class="modal-content" id="modal-content">
+  </div>
+</div>
 <main>
   {% for word in wordlist: %}
       <div class="wordbox">
-        {{ word }}
+        <button type="button" class="w_button" name="{{ word }}" onclick="get_def(this)">{{ word }}</button>
       </div>
   {% endfor %}
 </main>
